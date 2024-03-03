@@ -1,19 +1,27 @@
 package array;
+import java.util.Arrays;
 
 public class firstmissing {
-    public static int missnumber(int arr[], int n){
-        for(int i=0; i<n; i++){
-            if(arr[i] != i+1){
-                return i+1;
+
+    public static int misspos(int arr[]) {
+        Arrays.sort(arr);
+    
+        int missing = 1;
+    
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == missing) {
+                missing++;
+            } else if (arr[i] > missing) {
+                break;
             }
         }
-        return n+1;
+        return missing;
     }
+    
 
     public static void main(String[] args) {
-        int arr[]= {1, -5, -3, 2, 4, 5, 6};
-        int n= arr.length; 
-        int ans= missnumber(arr, n);
-        System.out.println(ans);
+        int array[] = { 3, 2, -6, 1, 4, 3, 5, 0 };
+
+        System.out.println(misspos(array));
     }
 }
