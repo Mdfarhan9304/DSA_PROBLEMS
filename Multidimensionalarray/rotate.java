@@ -9,19 +9,6 @@ public class rotate {
             }
         }
 
-        // for(int k=0; k<n; k++){
-        //     int left=0;
-        //     int right=n-1;
-
-        //     while(right < left){
-        //         int temp= arr[k][right];
-        //         arr[k][right]= arr[k][left];
-        //         arr[k][left]=temp;
-        //         left++;
-        //         right--;
-        //     }
-        // }
-
         for(int k=0; k<n; k++){
             int top=0;
             int bottom=n-1;
